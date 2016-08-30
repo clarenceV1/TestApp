@@ -13,8 +13,10 @@
             <option value="$PROJECT_DIR$/../LibImageLoader" />
             <option value="$PROJECT_DIR$/../LibNet" />
             <option value="$PROJECT_DIR$/../LibUtils" />
+            <option value="$PROJECT_DIR$/../LibWidget" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/libwidget" />
           </set>
         </option>
         <option name="myModules">
@@ -25,8 +27,10 @@
             <option value="$PROJECT_DIR$/../LibImageLoader" />
             <option value="$PROJECT_DIR$/../LibNet" />
             <option value="$PROJECT_DIR$/../LibUtils" />
+            <option value="$PROJECT_DIR$/../LibWidget" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/libwidget" />
           </set>
         </option>
       </GradleProjectSettings>

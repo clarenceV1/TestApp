@@ -8,8 +8,10 @@
       <module fileurl="file://$PROJECT_DIR$/../LibImageLoader/LibImageLoader.iml" filepath="$PROJECT_DIR$/../LibImageLoader/LibImageLoader.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LibNet/LibNet.iml" filepath="$PROJECT_DIR$/../LibNet/LibNet.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LibUtils/LibUtils.iml" filepath="$PROJECT_DIR$/../LibUtils/LibUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LibWidget/LibWidget.iml" filepath="$PROJECT_DIR$/../LibWidget/LibWidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestApp.iml" filepath="$PROJECT_DIR$/TestApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libwidget/libwidget.iml" filepath="$PROJECT_DIR$/libwidget/libwidget.iml" />
     </modules>
   </component>
 </project>
