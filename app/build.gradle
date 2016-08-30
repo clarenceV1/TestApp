@@ -1,0 +1,135 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt' //dagger需要
+project.ext {
+    envList = ['PRODUCT', 'TEST']
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.clarence.myapp"
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        if (espressoSwitch.equals("True")) {
+            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            jni.srcDirs = [] //不使用AS编译jni
+        }
+    }
+    signingConfigs {
+        debug {
+            // No debug config
+        }
+
+        release {
+            storeFile file("../keystore/netstars.keystore")
+            storePassword "123456"
+            keyAlias "netstars.keystore"
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+    productFlavors {
+        //线上环境
+        product {
+            manifestPlaceholders = [env_mode: envList[0], dev_mode: "false", umeng_channel: '1']
+        }
+        //测试环境
+        zroTest {
+            manifestPlaceholders = [env_mode: envList[1], dev_mode: "true", umeng_channel: '1']
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/ASL2.0'
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    android.enforceUniquePackageName = false
+
+    dataBinding {
+        enabled true
+    }
+
+    configurations.all {
+        if (espressoSwitch.equals("True")) {
+            resolutionStrategy.force 'com.android.support:support-annotations:23.0.1'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile project(':MyCore')
+
+    // 1. Dagger 2.0
+    compile 'com.google.dagger:dagger:2.0.2'
+    provided 'com.google.dagger:dagger-compiler:2.0.2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'com.android.support:design:23.1.1'
+
+    //单元测试－无UI
+    if (junitSwitch.equals("True")) {
+        testCompile 'junit:junit:4.12'
+    }
+
+    //自动化测试
+    if (espressoSwitch.equals("True")) {
+        androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.+'
+        androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.+'
+        androidTestCompile 'com.android.support.test:runner:0.5'
+        androidTestCompile 'com.android.support.test:rules:0.5'
+    }
+
+    //单元测试－有UI
+    if (robolectricSwitch.equals("True")) {
+        testCompile "org.robolectric:robolectric:3.0"
+    }
+
+}

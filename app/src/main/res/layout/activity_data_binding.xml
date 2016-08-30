@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- <data>  这也是一种绑定方式-->
+    <!-- <import type="com.liangfeizc.databindingsamples.basic.User" /> -->
+    <!-- <variable name="user" type="User" /> -->
+    <!-- </data> -->
+    <data class="TestDataBing">
+
+        <variable
+            name="temp"
+            type="String"/>
+
+        <variable
+            name="arrayMap"
+            alias="mapname"
+            type="android.databinding.ObservableArrayMap" />
+
+        <variable
+            name="arrayList"
+            type="android.databinding.ObservableArrayList" />
+
+        <variable
+            name="large"
+            type="boolean" />
+
+        <variable
+            name="attributeName"
+            type="String" />
+
+        <variable
+            name="user"
+            type="com.example.clarence.myapp.entity.User" />
+
+        <variable
+            name="plainUser"
+            type="com.example.clarence.myapp.entity.PlainUser" />
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/attribute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:text="@{attributeName}"
+            tools:text="我是属性绑定" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{plainUser.firstName??plainUser.lastName,default=firstName}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName??user.lastName}"
+            tools:text="displayName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@{large? (int)@dimen/largePadding : (int)@dimen/smallPadding}"
+            android:text="@{@string/nameFormat(user.firstName, user.lastName)}" />
+
+        <include
+            layout="@layout/activity_data_binding_child"
+            bind:listener="@{listener}"
+            bind:okText="@{user.age}" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:background="@{@color/amber}" />
+
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/view_stub" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+    </LinearLayout>
+</layout>

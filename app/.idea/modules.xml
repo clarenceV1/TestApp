@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MyApp.iml" filepath="$PROJECT_DIR$/../MyApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MyCore/MyCore.iml" filepath="$PROJECT_DIR$/../../MyCore/MyCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MyDataStore/MyDataStore.iml" filepath="$PROJECT_DIR$/../../MyDataStore/MyDataStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MyDownLoad/MyDownLoad.iml" filepath="$PROJECT_DIR$/../../MyDownLoad/MyDownLoad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MyImageLoader/MyImageLoader.iml" filepath="$PROJECT_DIR$/../../MyImageLoader/MyImageLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MyNet/MyNet.iml" filepath="$PROJECT_DIR$/../../MyNet/MyNet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../MyUtils/MyUtils.iml" filepath="$PROJECT_DIR$/../../MyUtils/MyUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyApp</string>
+
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    <string name="btnGoFActivity">跳转到F页面</string>
+    <string name="btnFragement">测试fragement</string>
+    <string name="JustifiedTextViewActivity">自适应textview</string>
+    <string name="dataBingActivity">数据绑定</string>
+    <string name="nameFormat">Full Name: %1$s:%2$s</string>
+</resources>

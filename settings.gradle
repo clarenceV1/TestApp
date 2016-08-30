@@ -1,0 +1,13 @@
+include ':app'
+include(':MyCore')
+project(':MyCore').projectDir = new File('../MyCore')
+include(':MyDataStore')
+project(':MyDataStore').projectDir = new File('../MyDataStore')
+include(':MyDownLoad')
+project(':MyDownLoad').projectDir = new File('../MyDownLoad')
+include(':MyImageLoader')
+project(':MyImageLoader').projectDir = new File('../MyImageLoader')
+include(':MyNet')
+project(':MyNet').projectDir = new File('../MyNet')
+include(':MyUtils')
+project(':MyUtils').projectDir = new File('../MyUtils')
