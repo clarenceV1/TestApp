@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../LibCore/LibCore.iml" filepath="$PROJECT_DIR$/../LibCore/LibCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LibDataStore/LibDataStore.iml" filepath="$PROJECT_DIR$/../LibDataStore/LibDataStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LibDownload/LibDownload.iml" filepath="$PROJECT_DIR$/../LibDownload/LibDownload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LibImageLoader/LibImageLoader.iml" filepath="$PROJECT_DIR$/../LibImageLoader/LibImageLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LibNet/LibNet.iml" filepath="$PROJECT_DIR$/../LibNet/LibNet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LibUtils/LibUtils.iml" filepath="$PROJECT_DIR$/../LibUtils/LibUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestApp.iml" filepath="$PROJECT_DIR$/TestApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
