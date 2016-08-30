@@ -5,3 +5,6 @@
 4.robolectric
 5.espresso
 6.EventBus
+7.MVC
+8.MVP
+9.MVVM

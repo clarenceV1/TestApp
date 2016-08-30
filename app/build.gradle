@@ -107,6 +107,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile project(':LibCore')
+    compile project(':LibWidget')
 
     // 1. Dagger 2.0
     compile 'com.google.dagger:dagger:2.0.2'

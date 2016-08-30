@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':libwidget'
 include(':LibCore')
 project(':LibCore').projectDir = new File('../LibCore')
 include(':LibDataStore')
@@ -11,3 +11,5 @@ include(':LibNet')
 project(':LibNet').projectDir = new File('../LibNet')
 include(':LibUtils')
 project(':LibUtils').projectDir = new File('../LibUtils')
+include(':LibWidget')
+project(':LibWidget').projectDir = new File('../LibWidget')
