@@ -55,4 +55,9 @@ public class TestMainActivity extends AppActivity {
         TestMainFragement mainFragement = new TestMainFragement();
         TestMainActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.testFragment, mainFragement, mainFragement.getFragmentTag()).commit();
     }
+
+    public void strickListView(View view) {
+        ContactsActivity mainFragement = new ContactsActivity();
+        TestMainActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.testFragment, mainFragement).commit();
+    }
 }
