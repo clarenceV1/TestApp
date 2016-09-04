@@ -1,4 +1,4 @@
-include ':app', ':libwidget'
+include ':app'
 include(':LibCore')
 project(':LibCore').projectDir = new File('../LibCore')
 include(':LibDataStore')
